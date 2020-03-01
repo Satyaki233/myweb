@@ -1,0 +1,29 @@
+{
+  "name": "myweb-api",
+  "version": "1.0.0",
+  "description": "Server of my official website ",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.1.0",
+    "aws-sdk": "^2.630.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "knex": "^0.20.10",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
+    "nodemailer": "^6.4.3",
+    "nodemon": "^2.0.2",
+    "path": "^0.12.7",
+    "pg": "^7.18.2",
+    "s3": "^4.4.0",
+    "url": "^0.11.0"
+  }
+}
