@@ -64,6 +64,21 @@ knex.schema.hasTable('artical').then(function(exists) {
   }
 });
 
+knex.schema.hasTable('multiple').then(function(exists) {
+  if (!exists) {
+    return knex.schema.createTable('multiple', function(t) {
+      t.increments('id').primary();
+      t.string('title', 100);
+      t.text('intro');
+      t.specificType('imagelocation','text ARRAY')
+      t.specificType('imagename','text ARRAY')
+      t.text('pg_one');
+      t.text('pg_two');
+      t.text('pg_three');
+    });
+  }
+});
+
 
 //Routes..................
 
@@ -77,9 +92,11 @@ app.get('/Contacts',(req,res)=>{User.handelContactsGet(req,res,knex)})
 
 app.post('/Artical',(req,res)=>{Post.handelArticalPost(req,res,knex)})
 
+app.post('/Multiple',(req,res)=>{Post.handelMultiPost(req,res,knex)})
+
 app.get('/Artical',(req,res)=>{Post.handelArticalGet(req,res,knex)})
 
-app.delete('/Artical/:id',(req,res)=>{Post.handelArticalDelete(req,res,knex)})
+app.delete('/Multiple/:id',(req,res)=>{Post.handelArticalDelete(req,res,knex)})
 
 //App listen
 
