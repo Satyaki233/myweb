@@ -163,8 +163,8 @@ const handelMultiPost= ( req, res, knex  ) => {
 };
 
 
-const handelArticalGet = (req,res,knex)=>{
-    knex.raw('select * from artical order by id desc')
+const handelMultipleGet = (req,res,knex)=>{
+    knex.raw('select * from multiple order by id desc')
     .then(data=>{
         res.status(200).json(data.rows)
     })
@@ -175,7 +175,7 @@ const handelArticalGet = (req,res,knex)=>{
 
 
 
-const handelArticalDelete = (req,res,knex)=>{
+const handelMultipleDelete = (req,res,knex)=>{
    const {id } = req.params;
    console.log(id)
    knex.raw('select * from multiple where id=?',id)
@@ -210,7 +210,7 @@ const handelArticalDelete = (req,res,knex)=>{
 }
 module.exports={
     handelArticalPost:handelArticalPost,
-    handelArticalGet:handelArticalGet,
-    handelArticalDelete: handelArticalDelete,
+    handelMultipleGet:handelMultipleGet,
+    handelMultipleDelete: handelMultipleDelete,
     handelMultiPost:handelMultiPost
 }

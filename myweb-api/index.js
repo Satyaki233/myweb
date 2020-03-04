@@ -94,9 +94,9 @@ app.post('/Artical',(req,res)=>{Post.handelArticalPost(req,res,knex)})
 
 app.post('/Multiple',(req,res)=>{Post.handelMultiPost(req,res,knex)})
 
-app.get('/Artical',(req,res)=>{Post.handelArticalGet(req,res,knex)})
+app.get('/Multiple',(req,res)=>{Post.handelMultipleGet(req,res,knex)})
 
-app.delete('/Multiple/:id',(req,res)=>{Post.handelArticalDelete(req,res,knex)})
+app.delete('/Multiple/:id',(req,res)=>{Post.handelMultipleDelete(req,res,knex)})
 
 //App listen
 

@@ -1,11 +1,17 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
+import Artical from './Artical'
+import Contact from './Contact'
 
 const Home = () => {
+   
+
+    
     return (
-        <div>
-            This home
+        <div className='container-fluid '>
+           
+        hellow
         </div>
     )
 }
 
-export default Home
+export default Home;
